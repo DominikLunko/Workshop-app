@@ -36,7 +36,7 @@ const WorkShopDetails: React.FC<any> = ({ match, history }) => {
   if (workshop?.id) workShopId = workshop.id;
 
   const cartQty = useSelector((state: RootStore) =>
-    state?.cart.products.find((item) => item.id === workShopId));
+    state?.cart.products.find((item) => item.id == workShopId));
 
 
   const [qty, setQty] = useState(1);

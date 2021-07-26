@@ -7,7 +7,7 @@ const cartFromLocalStorage = localStorage.getItem("cart");
 
 const INITIAL_STATE = {
   cart: {
-    products: cartFromLocalStorage && JSON.parse(cartFromLocalStorage),
+    products: (cartFromLocalStorage && JSON.parse(cartFromLocalStorage)) || [],
   },
 };
 
