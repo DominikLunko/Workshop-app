@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Order } from '../redux/actions/orderActionTypes';
 
-const API = axios.create({baseURL: 'http://localhost:3001'});
+const API = axios.create({baseURL: 'https://dominiklunko-workshop-app.herokuapp.com'});
 
 
 

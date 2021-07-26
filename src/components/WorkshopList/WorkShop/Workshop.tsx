@@ -124,6 +124,7 @@ const Workshop: React.FC<WorkshopType> = ({
         </Button>
         <ShoppingCartOutlinedIcon className="buy-icon" onClick={() => {
             dispatch(addToCart(id, 1, false));
+            dispatch(openCart())
             setPlusOne((prevState) => !prevState);
             setTimeout(()=>{
               setPlusOne((prevState) => !prevState)

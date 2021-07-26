@@ -235,7 +235,7 @@
           margin: 6px 0px;
         }
         @media screen and(max-width:660px) {
-          font-size: 12px;
+          font-size: 11px;
           margin: 4px 0px;
         }
       }
@@ -328,8 +328,11 @@
   
       .input-div {
         margin: 10px 10px;
+        @media screen and(max-width:1660px) {
+          margin: 5px 5px;
+        }
         @media screen and(max-width:767px) {
-          margin: 5px 10px;
+          margin: 5px 5px;
         }
         @media screen and(max-width:550px) {
           margin: 3px 5px;
@@ -365,7 +368,7 @@
         display: flex;
         margin: 5px 20px;
         justify-content: space-between;
-        @media screen and(max-width:650px) {
+        @media screen and(max-width:1660px) {
           flex-direction: column;
         }
         .date-gender-inside-div {

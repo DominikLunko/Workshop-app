@@ -11,17 +11,16 @@ import { CartDispatchTypes, ADD_TO_CART, REMOVE_FROM_CART, Cart, RESET_CART} fro
 export const cartReducer = (state:DefaultStateI = defaultState, action:CartDispatchTypes) => {
     switch(action.type){
 
-        // case RESET_CART:
-        //     return {
-        //         products:[]
-        //     }
+        case RESET_CART:
+            return {
+                products:[]
+            }
        
         case ADD_TO_CART:
             const item = {
                 ...action.payload
             }
 
-            console.log(state.products)
             const existItem = state.products.find((x) => x.id === item.id);
             
            

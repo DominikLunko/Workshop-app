@@ -13,7 +13,6 @@ export const addToCart = (id:number, qty:number, singleAdd:boolean) => async (di
         }
 
     })
-    console.log(data[0])
 
     localStorage.setItem('cart', JSON.stringify(getState().cart.products));
 };
