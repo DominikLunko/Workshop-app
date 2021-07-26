@@ -20,7 +20,13 @@ const WorkshopList: React.FC<any> = () => {
   const { loading, error, workshops, hasMore } = workshopState;
   const [allWorkShops, setAllWorkShops] = useState(workshops.length);
 
-  const sortedWorkshops = workshops.sort((a, b) => (a.date > b.date ? 1 : -1));
+  const [sortedWorkshops, setSortedWorkshops] = useState(workshops.sort((a, b) => (a.date > b.date ? 1 : -1)))
+ 
+  useEffect(()=> {
+    setSortedWorkshops(workshops.sort((a, b) => (a.date > b.date ? 1 : -1)))
+  },[workshops])
+
+
   return (
     <div className="cards">
       <div className="title">

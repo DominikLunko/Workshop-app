@@ -36,8 +36,8 @@ const WorkShopDetails: React.FC<any> = ({ match, history }) => {
   if (workshop?.id) workShopId = workshop.id;
 
   const cartQty = useSelector((state: RootStore) =>
-    state?.cart.products.find((item) => item.id == workShopId));
-
+    state?.cart.products.find((item) => item.id == workShopId)
+  );
 
   const [qty, setQty] = useState(1);
 
@@ -150,11 +150,10 @@ const WorkShopDetails: React.FC<any> = ({ match, history }) => {
                       ))}
                     </select>
                     <button
-                      onClick={() =>{
-                        dispatch(openCart())
-                        qty && dispatch(addToCart(workShopId, qty, true))
-                      }
-                      }
+                      onClick={() => {
+                        dispatch(openCart());
+                        qty && dispatch(addToCart(workShopId, qty, true));
+                      }}
                       className="add-button"
                     >
                       Add to Cart
@@ -173,7 +172,6 @@ const WorkShopDetails: React.FC<any> = ({ match, history }) => {
             </>
           )}
         </div>
-        
       </div>
       {similarWorkshops && similarWorkshops.length > 2 && (
         <div className="similar-workshops-container">
@@ -197,9 +195,11 @@ const WorkShopDetails: React.FC<any> = ({ match, history }) => {
           </div>
         </div>
       )}
-      <div className="footer" style={{ marginTop: "2px" }}>
-        <p>© TINEL Meetup 2020.</p>
-      </div>
+      {!loading && (
+        <div className="footer" style={{ marginTop: "2px" }}>
+          <p>© TINEL Meetup 2020.</p>
+        </div>
+      )}
     </>
   );
 };

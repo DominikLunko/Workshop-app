@@ -30,7 +30,7 @@ const Homepage: React.FC<any> = () => {
   const currentWorkshop = useSelector(
     (state: RootStore) => state.workshopDetails
   );
-  const { page, category, workshops } = useSelector(
+  const { page, category, workshops, loading, error } = useSelector(
     (state: RootStore) => state.workshop
   );
 
@@ -76,7 +76,7 @@ const Homepage: React.FC<any> = () => {
                   key={idx}
                   id={categoryElem}
                   className={
-                    category === categoryElem.toLowerCase()
+                    category === categoryElem.toLowerCase() || loading || error
                       ? "disabled"
                       : "active"
                   }
