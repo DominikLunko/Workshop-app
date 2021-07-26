@@ -86,7 +86,7 @@ import {
             ...state,
             loading: false,
             numberOfData:action.payload.numberOfData,
-            workshops: [...state.workshops, ...action.payload.workshops],
+            workshops: [...state.workshops, ...action.payload.workshops].sort((a, b) => (a.date > b.date ? 1 : -1)),
           };
         } else {
           return {

@@ -238,6 +238,7 @@
           font-size: 11px;
           margin: 4px 0px;
         }
+        
       }
   
       input {
@@ -254,6 +255,7 @@
           font-size: 12px;
           margin: 4px 0px;
         }
+        
       }
   
       .datepicker {
@@ -267,6 +269,7 @@
         @media screen and(max-width:767px) {
           font-size: 14px !important;
         }
+        
       }
       .datepicker-fail {
         font-size: 25px !important;
@@ -279,6 +282,7 @@
         @media screen and(max-width:767px) {
           font-size: 14px !important;
         }
+        
       }
   
       .title-desc {
@@ -436,6 +440,14 @@
         @media screen and(max-width:1660px) {
           font-size: 17px !important;
           height: 55px;
+        }
+        @media screen and(max-width:1200px) {
+          font-size: 14px !important;
+          height: 55px;
+        }
+        @media screen and(max-height:900px) {
+          margin-bottom:20px !important;
+          padding:10px 0px !important;
         }
       }
   

@@ -10,7 +10,6 @@ import "./WorkshopList.scss";
 
 import { RootStore } from "../../redux/store";
 import {
-  getWorkshops,
   increasePage,
 } from "../../redux/actions/workshopActions";
 
@@ -18,13 +17,7 @@ const WorkshopList: React.FC<any> = () => {
   const dispatch = useDispatch();
   const workshopState = useSelector((state: RootStore) => state.workshop);
   const { loading, error, workshops, hasMore } = workshopState;
-  const [allWorkShops, setAllWorkShops] = useState(workshops.length);
-
-  const [sortedWorkshops, setSortedWorkshops] = useState(workshops.sort((a, b) => (a.date > b.date ? 1 : -1)))
- 
-  useEffect(()=> {
-    setSortedWorkshops(workshops.sort((a, b) => (a.date > b.date ? 1 : -1)))
-  },[workshops])
+  
 
 
   return (
@@ -43,7 +36,7 @@ const WorkshopList: React.FC<any> = () => {
         <Container className="cards-container">
           <Row className="row-workshop" xl="3" lg="2" md="2" xs="1">
             {workshops &&
-              sortedWorkshops.map((workshop, idx) => (
+              workshops.map((workshop, idx) => (
                 <Col key={idx}>
                   <Workshop
                     key={workshop.id}
