@@ -62,6 +62,8 @@ const Workshop: React.FC<WorkshopType> = ({
 
   const [plusOne, setPlusOne] = useState(false);
 
+  const {opened} = useSelector((state: RootStore) => state.openCart);
+
   return (
     <Card className="card-project" id={JSON.stringify(id)?.concat("-card")}>
       <Link to={`/workshop/${id}`} className="info__button">
@@ -113,7 +115,7 @@ const Workshop: React.FC<WorkshopType> = ({
           className="button"
           onClick={() => {
             dispatch(addToCart(id, 1, false));
-            dispatch(openCart())
+            !opened && dispatch(openCart())
             setPlusOne((prevState) => !prevState);
             setTimeout(()=>{
               setPlusOne((prevState) => !prevState)
