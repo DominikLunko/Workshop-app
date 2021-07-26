@@ -1,0 +1,83 @@
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: fit-content;
+
+    
+    & .cart-icon{
+        position: relative;
+        @media screen and(max-width:425px) {
+            right:0;
+        }
+
+
+        
+        .shopping-icon {
+            font-size: 50px !important;
+
+            @media screen and  (max-width:1920px){
+                font-size: 34px !important;          
+              }
+              @media screen and  (max-width:1200px){
+                font-size: 30px !important;          
+              }
+              @media screen and  (max-width:900px){
+                font-size: 27px !important;          
+              }
+        }
+        & .blue-dot{
+            color:#00AAE4 !important;
+            font-size: 18px;
+            position: absolute;
+            top:-1%;
+            right:2%;
+            @media screen and  (max-width:1920px){
+                font-size: 13px !important;          
+              }
+              @media screen and  (max-width:1660px){
+                font-size: 10px !important;          
+              }
+              @media screen and  (max-width:1440px){
+                font-size: 9px !important;          
+              }
+              @media screen and  (max-width:1200px){
+                font-size: 8px;
+                top:3% !important;          
+              }
+              @media screen and  (max-width:900px){
+                top:8%;           
+              }
+            // @media screen and(max-width:425px) {
+            //     display: none;
+            // }
+        } 
+    }
+
+  & .cart-number{
+      font-size: 32px;
+      font-weight: bold;
+      margin:0 !important;
+      font-family: "Times New Roman", Times, serif;
+
+      @media screen and  (max-width:1920px){
+        font-size: 26px;          
+      }
+      @media screen and  (max-width:1660px){
+        font-size: 22px;          
+      }
+      @media screen and  (max-width:1440px){
+        font-size: 20px;          
+      }
+      @media screen and  (max-width:1200px){
+        font-size: 18px;          
+      }
+      @media screen and  (max-width:900px){
+        font-size: 16px;          
+      }
+      @media screen and(max-width:425px) {
+        display:none ;
+    }
+  }
+}
